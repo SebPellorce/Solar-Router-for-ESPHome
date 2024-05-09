@@ -22,4 +22,4 @@ output:
   - platform: slow_pwm
     id: relay_output
     pin: ${regulator_gate_pin}
-    period: 160ms
+    period: 1000ms
