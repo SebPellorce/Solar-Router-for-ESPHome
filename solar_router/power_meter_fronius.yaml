@@ -49,7 +49,7 @@ script:
 time:
   - platform: sntp
     on_time:
-      - seconds: /2
+      - seconds: /1
         then:
           - if:
               condition:
