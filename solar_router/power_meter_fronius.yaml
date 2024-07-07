@@ -41,7 +41,7 @@ script:
                 url: http://${power_meter_ip_address}/emeter/0
                 headers:
                   Content-Type: application/json
-                verify_ssl: False
+                #verify_ssl: False
                 on_response:
                   then:
                     - lambda: |-
