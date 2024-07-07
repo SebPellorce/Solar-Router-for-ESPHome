@@ -16,7 +16,7 @@ sensor:
 # ----------------------------------------------------------------------------------------------------
 
 http_request:
-  id: http_request_data
+  Sid: http_request_data
   useragent: esphome/device
   timeout: 10s
   # verify_ssl: false
