@@ -44,8 +44,13 @@ script:
                 #verify_ssl: False
                 on_response:
                   then:
-                    - lambda: |-
-                        json::parse_json(id(http_request_data).get_string(),[](JsonObject root){id(real_power).publish_state(root["power"].as< float >());});
+                  - lambda: |-
+                      json::parse_json(body, [](JsonObject root) -> bool {
+                        id(real_power).publish_state(root["power"]);
+                        return true;
+                      });
+#                    - lambda: |-
+#                        json::parse_json(id(http_request_data).get_string(),[](JsonObject root){id(real_power).publish_state(root["power"].as< float >());});
 
 time:
   - platform: sntp
