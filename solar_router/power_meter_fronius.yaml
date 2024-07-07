@@ -19,7 +19,7 @@ http_request:
   id: http_request_data
   useragent: esphome/device
   timeout: 10s
-  verify_ssl: false
+  # verify_ssl: false
 
 # ----------------------------------------------------------------------------------------------------
 # Define scripts for power collection
